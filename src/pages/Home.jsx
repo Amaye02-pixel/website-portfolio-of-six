@@ -2,6 +2,7 @@ import members from "../data/members";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import project1Video from "../assets/projects/project1.mp4";
 
 const Home = () => {
     return (
@@ -58,6 +59,28 @@ const Home = () => {
                     </Link>
                 </div>
             </section >
+
+            <section className="projects-section fade-in">
+                <h1>Our Projects</h1>
+
+                <div className="projects-grid">
+                    {/* Project 1 */}
+                    <div className="project-card">
+                        <h3>Library Management System</h3>
+
+                        <video controls muted>
+                            <source src={project1Video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <p>
+                            A system designed using UML diagrams and database concepts to manage
+                            books, users, and transactions efficiently.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
 
 
             <Footer />

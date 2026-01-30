@@ -107,6 +107,7 @@ video {
 .header nav {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .header nav a {
@@ -129,16 +130,64 @@ video {
   width: 100%;
 }
 
-/* Mobile Header */
-@media (max-width: 600px) {
+/* =======================
+   Hamburger
+======================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+body.dark .hamburger span {
+  background: #fff;
+}
+
+/* =======================
+   Mobile Header
+======================= */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
   .header {
-    flex-direction: column;
-    gap: 0.8rem;
-    text-align: center;
+    flex-direction: row;
   }
 
   .header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
     gap: 1rem;
+    padding: 1.5rem 0;
+    display: none;
+    text-align: center;
+  }
+
+  body.dark .header nav {
+    background: #151821;
+  }
+
+  .header nav.open {
+    display: flex;
+  }
+
+  .header nav a {
+    font-size: 1.1rem;
   }
 }
 
@@ -512,5 +561,63 @@ body.dark .analysis-item p {
 /* Dark mode */
 body.dark .content-section p,
 body.dark .content-section li {
+  color: #cbd5e1;
+}
+
+/* =======================
+   Our Projects Section
+======================= */
+
+.projects-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.projects-section h1 {
+  margin-bottom: 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.project-card video,
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode */
+body.dark .project-card {
+  background: #151821;
+}
+
+body.dark .project-card p {
   color: #cbd5e1;
 }
