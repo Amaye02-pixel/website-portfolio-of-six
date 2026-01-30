@@ -7,9 +7,9 @@ import member6 from "../assets/images/member6.jpg";
 
 const members = [
     {
-        id: "kyaw-zein-hein",
-        name: "Kyaw Zein Hein",
-        role: "Frontend Developer",
+        id: "kyaw-zin-hein",
+        name: "Kyaw Zin Hein",
+        role: "Power Ranger-RED",
         image: member1,
         cv: "/cv/Kyaw_Zein_Hein_CV.pdf",
         bio: "Motivated and detail-oriented student seeking an entry-level position in tech or creative fields, such as Junior Developer, Frontend Trainee, or Graphic Design Assistant. Currently strengthening technical and design skills through academic study and self-learning, with strong willingness to learn, adapt, and grow in a professional environment.",
@@ -82,7 +82,7 @@ const members = [
         cv: "/cv/Chit-Lin-Naing.pdf",
         bio: "I am a motivated student who is interested in learning new skills and improving my knowledge. I am responsible, hardworking, and always ready to give my best to achieve my goals.",
         skills: [
-            { name: " Basic Computer Skills (MS Word, PowerPoint, Internet)", level: 60 },
+            { name: "Basic Computer Skills (MS Word, PowerPoint, Internet)", level: 60 },
             { name: "Basic Programming (Python / Java / C++)", level: 50 },
             { name: "SQL", level: 65 },
             { name: "Diagram Drawing (UML, Use Case, Activity Diagram, Class Diagram, State Machine Diagram)", level: 50 },
@@ -101,13 +101,27 @@ const members = [
     },
 
     {
-        id: 4,
-        name: "Member Four",
-        role: "Full Stack Developer",
+        id: "aung-khant-soe",
+        name: "Aung Khant Soe",
+        role: "Power Ranger-Black",
         image: member4,
-        about:
-            "Handles both frontend and backend development with a strong system mindset.",
-        skills: ["React", "Node.js", "SQL"],
+        cv: "/cv/Aung_Khant_Soe_CV.pdf",
+        bio: "I am a motivated Business Technology student with a strong interest in combining business strategy with modern digital tools. I am eager to learn how technology can improve efficiency, decision-making, and innovation in organizations. With a curious mindset and a disciplined approach to my studies, I aim to build a solid foundation in both management and technical skills.",
+        skills: [
+            { name: "Basic Computer Skills (MS Word, PowerPoint, Internet)", level: 60 },
+            { name: "Basic Programming (Python / Java / C++)", level: 50 },
+            { name: "SQL", level: 50 },
+            { name: "Diagram Drawing (UML, Use Case, Activity Diagram, Class Diagram, State Machine Diagram)", level: 60 },
+        ],
+
+        education: [
+            "Completed GED",
+            "Attending SIBA College for Digital Business Technology"
+        ],
+        experience: [
+            "Simple Game program(Python)",
+            "UML Diagram Drawing"
+        ]
     },
     {
         id: "min-khant",
